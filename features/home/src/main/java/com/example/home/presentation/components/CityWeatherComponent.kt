@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.home.R
@@ -80,8 +81,10 @@ fun CityWeather(weather: Weather, modifier: Modifier = Modifier) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = weather.cityName,
-                    style = MaterialTheme.typography.displayMedium,
-                    fontWeight = FontWeight.Bold
+                    maxLines = 1,
+                    style = MaterialTheme.typography.displaySmall,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Icon(
@@ -93,9 +96,10 @@ fun CityWeather(weather: Weather, modifier: Modifier = Modifier) {
             }
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "${weather.tempC}°C",
+                text = "${weather.tempC}°c",
                 style = MaterialTheme.typography.displayLarge,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center
             )
             WeatherDetailsCard(weather = weather)
         }

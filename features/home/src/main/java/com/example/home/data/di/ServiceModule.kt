@@ -1,6 +1,6 @@
 package com.example.home.data.di
 
-import com.example.home.domain.remote.WeatherService
+import com.example.home.data.remote.WeatherService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

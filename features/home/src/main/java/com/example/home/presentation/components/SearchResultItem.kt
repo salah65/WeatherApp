@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.core.ui.theme.LightGrayBackground
@@ -45,16 +46,20 @@ fun SearchResultItem(
             Text(
                 text = weather.cityName,
                 color = Color.Black,
+                maxLines = 1,
                 style = MaterialTheme.typography.headlineLarge,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center
+
             )
             Text(
                 text = "${weather.tempC}°",
                 color = Color.Black,
                 style = MaterialTheme.typography.displayLarge,
                 fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center
 
-                )
+            )
         }
         Spacer(modifier = Modifier.weight(1f))
         WeatherIcon(modifier = modifier.size(150.dp), url = weather.conditionIconUrl)

@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -19,6 +18,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.home.presentation.components.CityWeather
+import com.example.home.presentation.components.NoCitySelected
 import com.example.home.presentation.components.SearchLocationBar
 import com.example.home.presentation.components.SearchResultItem
 import com.example.home.presentation.viewmodel.HomeScreenViewmodel
@@ -29,6 +30,7 @@ fun HomeScreen(
     modifier: Modifier = Modifier, viewmodel: HomeScreenViewmodel = hiltViewModel()
 ) {
     val weather by viewmodel.weatherData.collectAsState()
+    val cachedWeather by viewmodel.cachedWeather.collectAsState()
     val error by viewmodel.error.collectAsState()
     val context = LocalContext.current
     var query by remember { mutableStateOf("") }
@@ -50,15 +52,11 @@ fun HomeScreen(
         }
         Box(modifier = modifier.weight(1f)) {
             weather?.let { weather ->
-                LazyColumn {
-                    items(1) {
-                        SearchResultItem(weather = weather) { item ->
-                            Toast.makeText(context, "Selected Location saved", Toast.LENGTH_SHORT)
-                                .show()
-                        }
-                    }
+                SearchResultItem(weather = weather) { item ->
+                    Toast.makeText(context, "Selected Location saved", Toast.LENGTH_SHORT).show()
+                    viewmodel.cacheCurrentWeather(item)
                 }
-            }
+            } ?: cachedWeather?.let { CityWeather(weather = it) } ?: NoCitySelected()
         }
 
     }
