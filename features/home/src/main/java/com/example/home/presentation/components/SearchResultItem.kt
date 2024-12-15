@@ -19,7 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.core.ui.theme.LightGrayBackground
+import com.example.core.presentation.theme.LightGrayBackground
 import com.example.home.domain.models.Weather
 
 @Composable

@@ -15,10 +15,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.core.ui.theme.LightGrayBackground
+import com.example.core.presentation.theme.LightGray
+import com.example.core.presentation.theme.LightGrayBackground
+import com.example.core.presentation.theme.MediumGray
 import com.example.home.domain.models.Weather
 
 @Composable
@@ -50,8 +52,8 @@ fun WeatherDetailsItem(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
-        Text(text = title, color = Color.Gray)
-        Text(text = value, color = Color.DarkGray)
+        Text(text = title, color = LightGray)
+        Text(text = value, color = MediumGray, fontWeight = FontWeight.Bold)
     }
 }
 

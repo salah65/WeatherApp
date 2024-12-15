@@ -1,4 +1,4 @@
-package com.example.core.ui.theme
+package com.example.core.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
@@ -11,3 +11,6 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val LightGrayBackground = Color(0xFFF5F5F5)
+val MediumGray = Color(0X9A9A9A9A)
+val LightGray = Color(0xC4C4C4C4)
+

@@ -48,7 +48,8 @@ fun CityWeather(weather: Weather, modifier: Modifier = Modifier) {
                     Text(
                         text = weather.cityName,
                         style = MaterialTheme.typography.displayMedium,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        maxLines = 1
                     )
                     Spacer(modifier = Modifier.width(16.dp))
                     Icon(

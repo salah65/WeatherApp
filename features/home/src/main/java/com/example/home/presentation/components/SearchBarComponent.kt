@@ -24,7 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.core.ui.theme.LightGrayBackground
+import com.example.core.presentation.theme.LightGrayBackground
+import com.example.core.presentation.theme.MediumGray
 
 
 @Composable
@@ -51,6 +52,7 @@ fun SearchLocationBar(
                 placeholder = {
                     Text(
                         text = "Search Location",
+                        color = MediumGray,
                         style = MaterialTheme.typography.bodyMedium
                     )
                 },
