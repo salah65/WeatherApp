@@ -44,7 +44,7 @@ fun SearchResultItem(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = weather.cityName,
+                text = weather.cityName.split(" ").first(),
                 color = Color.Black,
                 maxLines = 1,
                 style = MaterialTheme.typography.headlineLarge,
