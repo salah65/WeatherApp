@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -18,6 +20,22 @@ android {
 
     buildFeatures {
         buildConfig = true
+    }
+
+    defaultConfig {
+        val keystoreFile = project.rootProject.file("credentials.properties")
+        val properties = Properties()
+        properties.load(keystoreFile.inputStream())
+        val apiKey = properties.getProperty("API_Key") ?: "-1"
+        val baseUrl = properties.getProperty("Base_Url") ?: "\"http://example.com\""
+        buildConfigField(
+            type = "String", name = "API_KEY", value = apiKey
+        )
+        buildConfigField(
+            type = "String", name = "Base_Url", value = baseUrl
+        )
+
+
     }
 
     buildTypes {

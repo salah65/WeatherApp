@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml:2:13-83
+INJECTED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml:2:13-83
+	package
+		INJECTED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml
+	xmlns:android
+		ADDED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml:2:23-81
+uses-sdk
+INJECTED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml reason: use-sdk injection requested
+INJECTED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml
+INJECTED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml
+	android:targetSdkVersion
+		INJECTED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml
+	android:minSdkVersion
+		INJECTED from /Users/salahsamy/Desktop/WeatherApp/core/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest5392900578426538523.xml
